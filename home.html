@@ -33,7 +33,7 @@
                 <div class="">
                     <div class="camera"></div>
                     <div class="display">
-                        <div class="artboard  bg-base-200 phone-2 p-3 overflow-scroll scrollbar-width-none rounded-2xl">
+                        <div class="artboard bg-[#F4F5F7] phone-2 p-3 overflow-scroll scrollbar-width-none rounded-2xl">
                             <!-- top section  -->
                             <section class="mt-6 flex justify-between items-center">
                                 <div class="flex items-center gap-2">
@@ -128,7 +128,7 @@
                                     </svg>
                                     <p class="font-normal">Add Money</p>
                                 </button>
-                                <button class="btn btn-lg h-[78px] pt-2 pb-2">
+                                <button id="cashout-btn" class="btn btn-lg h-[78px] pt-2 pb-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
                                         fill="none">
                                         <g clip-path="url(#clip0_11_2727)">
@@ -181,23 +181,49 @@
                             </section>
                             <div class="divider"></div>
 
-                            <div id="add-money-form-container" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-auto hidden">
+                            <div id="add-money-form-container"
+                                class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-auto hidden">
                                 <form class="card-body">
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Amount</span>
                                         </label>
-                                        <input id="amount-to-add" type="text" placeholder="Amount to add" class="input input-bordered" required />
+                                        <input id="amount-to-add" type="text" placeholder="Amount to add"
+                                            class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Pin</span>
                                         </label>
-                                        <input id="pin-input" type="password" placeholder="Confirm via pin number" class="input input-bordered"
+                                        <input id="pin-input" type="password" placeholder="Confirm via pin number"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="new-money-add-btn" class="btn btn-primary">Add money</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- cashout form  -->
+                            <div id="cashout-form-container" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-auto hidden">
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount</span>
+                                        </label>
+                                        <input id="cashout-amount" type="text" placeholder="Cashout amount"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Pin</span>
+                                        </label>
+                                        <input id="cashout-pin-input" type="password"
+                                            placeholder="Confirm via pin number" class="input input-bordered"
                                             required />
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button id="new-money-add-btn" class="btn btn-primary">Add</button>
+                                        <button id="form-cashout-btn" class="btn btn-primary">Cashout</button>
                                     </div>
                                 </form>
                             </div>

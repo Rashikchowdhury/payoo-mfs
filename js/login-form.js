@@ -11,6 +11,7 @@ document.getElementById('login-btn')
         }
         else {
             alert('Wrong phone number or password');
+            document.createElement('button')
             document.getElementById('phone-number').value = '';
             document.getElementById('pin-number').value = '';
         }
